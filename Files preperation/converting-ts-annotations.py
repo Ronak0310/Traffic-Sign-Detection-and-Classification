@@ -130,5 +130,4 @@ for current_dir, dirs, files in os.walk('.'):
             path_to_save = full_path_to_ts_dataset + '\\' + image_name + '.jpg'
 
             # Saving image in jpg format by OpenCV function
-            # that uses extension to choose format to save with
             cv2.imwrite(path_to_save, image_ppm)
