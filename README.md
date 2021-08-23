@@ -15,6 +15,9 @@ Both models are used in stake to make detection and classification at the same t
 ![yolo_1](https://user-images.githubusercontent.com/64780908/130485378-84458a98-b375-4188-af7c-eea0f390af9f.jpg)
 ### Final result-1
 ![final_1](https://user-images.githubusercontent.com/64780908/130485411-145b2483-1e12-40a1-8cd8-ada35b608886.jpg)
+### Input Image-2
 ![real_2](https://user-images.githubusercontent.com/64780908/130485434-03b31b53-79d1-4471-94f8-c1d920a0b7d9.jpg)
+### YOLOv3 result-2
 ![yolo_2](https://user-images.githubusercontent.com/64780908/130485442-cde40132-a2ab-4c58-afa9-774a66c32171.jpg)
+### Final result-2
 ![final_2](https://user-images.githubusercontent.com/64780908/130485453-05c28ba8-17e8-48e7-8a26-bbbea25e2de9.jpg)
