@@ -1,0 +1,92 @@
+absl-py==0.12.0
+aiohttp @ file:///D:/bld/aiohttp_1614281086591/work
+astor @ file:///home/conda/feedstock_root/build_artifacts/astor_1593610464257/work
+astunparse==1.6.3
+async-timeout==3.0.1
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1605083924122/work
+awscli==1.19.58
+blinker==1.4
+botocore==1.20.58
+brotlipy==0.7.0
+cachetools==4.2.2
+certifi==2021.5.30
+cffi @ file:///D:/bld/cffi_1613414140225/work
+chardet==4.0.0
+click==7.1.2
+colorama==0.4.3
+cryptography @ file:///D:/bld/cryptography_1616851649655/work
+cycler==0.10.0
+docutils==0.15.2
+flatbuffers==1.12
+gast==0.4.0
+google-auth==1.31.0
+google-auth-oauthlib==0.4.4
+google-pasta==0.2.0
+grpcio==1.34.1
+h5py==2.10.0
+idna==2.10
+importlib-metadata @ file:///D:/bld/importlib-metadata_1619012356363/work
+jmespath==0.10.0
+Keras @ file:///home/conda/feedstock_root/build_artifacts/keras_1618861913295/work
+Keras-Applications==1.0.8
+keras-nightly==2.5.0.dev2021032900
+Keras-Preprocessing==1.1.2
+kiwisolver @ file:///D:/bld/kiwisolver_1610099948875/work
+lxml @ file:///C:/ci/lxml_1603216366346/work
+Markdown==3.3.4
+matplotlib @ file:///D:/bld/matplotlib-suite_1617212937240/work
+mkl-fft==1.3.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+multidict @ file:///D:/bld/multidict_1610319170773/work
+numpy==1.19.5
+oauthlib==3.1.1
+olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
+opencv-python==4.5.1.48
+opt-einsum==3.3.0
+pandas @ file:///C:/ci/pandas_1618365634936/work
+Pillow @ file:///D:/bld/pillow_1617818230657/work
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
+PyJWT @ file:///home/conda/feedstock_root/build_artifacts/pyjwt_1617199158555/work
+pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1608055815057/work
+pyparsing==2.4.7
+PyQt5==5.15.4
+pyqt5-plugins==5.15.4.2.1.0
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.8.1
+pyqt5-tools==5.15.4.3.0.3
+PyQtChart==5.12
+PyQtWebEngine==5.12.1
+pyreadline @ file:///D:/bld/pyreadline_1611175364000/work
+PySocks @ file:///D:/bld/pysocks_1610291742246/work
+python-dateutil==2.8.1
+python-dotenv==0.17.1
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+PyYAML==5.4.1
+qt5-applications==5.15.2.2.1
+qt5-tools==5.15.2.1.0.1
+requests==2.25.1
+requests-oauthlib==1.3.0
+rsa==4.7.2
+s3transfer==0.4.2
+scipy @ file:///C:/bld/scipy_1616878843131/work
+six==1.15.0
+tensorboard==2.5.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.5.0
+tensorflow-estimator==2.5.0
+termcolor==1.1.0
+tornado @ file:///D:/bld/tornado_1610094858390/work
+tqdm==4.60.0
+typing-extensions==3.7.4.3
+urllib3==1.26.5
+Werkzeug==2.0.1
+win-inet-pton @ file:///D:/bld/win_inet_pton_1610147566231/work
+wincertstore==0.2
+wrapt==1.12.1
+yarl @ file:///D:/bld/yarl_1610354399983/work
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1614945704755/work
