@@ -1,5 +1,5 @@
 # Traffic Sign Detection and Classification
-Traffic Sign recognition in real time using YOLO-v3 and additional CNN
+## Traffic Sign recognition in real time using YOLO-v3 and additional CNN
 
 
 Main goal of this project is to detect and classify the traffic signs in real time. The project involves delvelopment of two models. First model is based on YOLOv3 (You Only Look Once version-3) architecture, which is trained on German Traffic Sign Detection Benchmark(GTSDB) dataset. This model gives accurate detection of traffic signs as result of coorect bounding box arround the traffic sign.
@@ -21,3 +21,9 @@ Both models are used in stake to make detection and classification at the same t
 ![yolo_2](https://user-images.githubusercontent.com/64780908/130485442-cde40132-a2ab-4c58-afa9-774a66c32171.jpg)
 ### Final result-2
 ![final_2](https://user-images.githubusercontent.com/64780908/130485453-05c28ba8-17e8-48e7-8a26-bbbea25e2de9.jpg)
+
+## Sample videos of the result
+
+https://user-images.githubusercontent.com/64780908/130487780-853a9e9b-378d-4a41-81b2-b0e312e12c61.mp4
+
+
