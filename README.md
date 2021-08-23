@@ -22,7 +22,7 @@ Both models are used in stake to make detection and classification at the same t
 ### Final result-2
 ![final_2](https://user-images.githubusercontent.com/64780908/130485453-05c28ba8-17e8-48e7-8a26-bbbea25e2de9.jpg)
 
-## Sample videos of the result
+## Sample video of the result
 
 https://user-images.githubusercontent.com/64780908/130487780-853a9e9b-378d-4a41-81b2-b0e312e12c61.mp4
 
