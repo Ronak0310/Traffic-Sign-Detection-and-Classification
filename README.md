@@ -8,6 +8,9 @@ Second model is based on Convolutional Neural Network(CNN), which is developed a
 
 Both models are used in stake to make detection and classification at the same time.
 
+## Project Flowchart
+![flowchart](https://github.com/Ronak0310/Traffic-Sign-Detection-and-Classification/blob/main/Test/Flowchart.svg)
+
 ## Sample images of results from the both models
 ### Input Image-1
 ![real_1](https://user-images.githubusercontent.com/64780908/130485320-cb002410-1fdb-475b-85bb-438d81da423e.jpg)
