@@ -26,7 +26,7 @@ with open('mean_image_gray.pickle', 'rb') as f:
 
 
 class Inference():
-    def __init__(self, input, weights, model,output=None):
+    def __init__(self, input, weights, model, output=None):
         self.cfg = '../Required_files/yolov3_ts_test.cfg'
         self.probability_minimum = 0.2
         self.threshold = 0.2
