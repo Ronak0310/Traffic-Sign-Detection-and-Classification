@@ -1,5 +1,6 @@
 # Import needed libraries
-import numpy as np 
+import numpy as np
+from numpy.core.numeric import Inf 
 import pandas as pd 
 import cv2
 import time
@@ -8,6 +9,7 @@ import matplotlib.pyplot as plt
 import pickle
 from tensorflow.keras.models import load_model
 import os
+import argparse
 
 # from tensorflow.compat.v1 import ConfigProto
 # from tensorflow.compat.v1 import InteractiveSession
@@ -24,12 +26,12 @@ with open('mean_image_gray.pickle', 'rb') as f:
 
 
 class Inference():
-    def __init__(self, input, weights, model_path,output=None):
+    def __init__(self, input, weights, model,output=None):
         self.cfg = '../Required_files/yolov3_ts_test.cfg'
         self.probability_minimum = 0.2
         self.threshold = 0.2
         self.labels = labels
-        self.model_path = model_path
+        self.model = model
         self.colours = np.random.randint(0, 255, size=(len(self.labels), 3), dtype='uint8')
 
         # Checking input
@@ -66,7 +68,7 @@ class Inference():
             self.output = output
         
         # Loading Classifier_Model
-        self.model = load_model(self.model_path)
+        self.model = load_model(self.model)
 
         # Loading Yolov3 trained model
         self.network = cv2.dnn.readNetFromDarknet(self.cfg, weights)
@@ -184,15 +186,32 @@ class Inference():
                     image_BGR = cv2.rectangle(image_BGR, (x_min, y_min - 20), (x_min + w1, y_min), colour_box_current, -1, cv2.LINE_AA)
                     image_BGR = cv2.putText(image_BGR, text_box_current, (x_min, y_min - 5),
                                             cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,0,0), 1, cv2.LINE_AA)
-                    
+
                     cv2.imwrite(self.output, image_BGR)
 
         print(f'\n Detection finished in {t} seconds')
+    
+    def parse_opt():
+        parser = argparse.ArgumentParser()
+        parser.add_argument('--input', type=str, default=None, help='Path to input file(s):(.jpg)/(.png)')
+        parser.add_argument('--weights', type=str, default=None, help='path to the model weights')
+        parser.add_argument('--model', type=str, default=None, help='path to the classifier model(s)')
+        parser.add_argument('--output', type=str, default=None, help='pathe to save result(s)')
+        opt = parser.parse_args()
+        return opt
+
+    def main(opt):
+        Inference(**vars(opt))
+
 
 if __name__ == "__main__":
-    Inference(
-        r'E:\Study_3\project_git\img_1.jpg',
-        r'E:\Study_3\project_git\yolov3_ts_train_last.weights',
-        r'E:\Study_3\project_git\new_model.h5',
-        r'E:\Study_3\project_git\result_1.jpg'
-    )
+
+    opt = Inference.parse_opt()
+    Inference.main(opt)
+
+    # Inference(
+    #     r'E:\Study_3\project_git\img_1.jpg',
+    #     r'E:\Study_3\project_git\yolov3_ts_train_last.weights',
+    #     r'E:\Study_3\project_git\new_model.h5',
+    #     r'E:\Study_3\project_git\result_1.jpg'
+    # )
