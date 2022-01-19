@@ -8,7 +8,7 @@ Second model is based on **Convolutional Neural Network(CNN)**, which is develop
 
 Both models are used in stake to make detection and classification at the same time.
 
-_**Note**_ : _Here, the second model(CNN) has been trained in order to incease the classification accuracy, because in the first Model(YoloV3) training only 900 Images were available to classify among 43 classes._
+_**Note**_ : _Here, the second model(CNN) has been trained in order to increase the classification accuracy, because in the first Model(YoloV3) training only 900 Images were available to classify among 43 classes._
 
 
 ## Project Flowchart
