@@ -1,3 +1,7 @@
+"""
+@author: Ronak
+"""
+
 # Import needed libraries
 import numpy as np
 from numpy.core.numeric import Inf 
