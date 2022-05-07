@@ -186,7 +186,9 @@ class Inference():
                         colour_box_current = self.colours[class_numbers[i]].tolist()
                         
                         # Drawing bounding box on the original current frame
-                        cv2.rectangle(frame, (x_min, y_min),
+                        # Displays the main bbox and add overlay to make bbox transparent
+                        overlay = frame.copy()
+                        cv2.rectangle(overlay, (x_min, y_min),
                                      (x_min + box_width, y_min + box_height),
                                      colour_box_current, 2)
 
@@ -197,8 +199,9 @@ class Inference():
                         
                         # Putting text with label and confidence on the original image
                         cv2.rectangle(frame, (x_min, y_min - 20), (x_min + w1, y_min), colour_box_current, -1, cv2.LINE_AA)
-                        cv2.putText(frame, text_box_current, (x_min, y_min - 5),
-                                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,0,0), 1, cv2.LINE_AA)
+                        image = cv2.addWeighted(overlay, 0.6, frame, 0.4, 0)
+                        frame = cv2.putText(image, text_box_current, (x_min, y_min - 5),
+                                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,0,0), 1, cv2.LINE_AA)
 
             if writer is None:
                 fourcc = cv2.VideoWriter_fourcc(*'mp4v')

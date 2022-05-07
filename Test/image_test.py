@@ -173,9 +173,11 @@ class Inference():
                     colour_box_current = self.colours[class_numbers[i]].tolist()
                     
                     # Drawing bounding box on the original current frame
-                    image_BGR = cv2.rectangle(image_BGR, (x_min, y_min),
-                                             (x_min + box_width, y_min + box_height),
-                                             colour_box_current, 2)
+                    # Displays the main bbox and add overlay to make bbox transparent
+                    overlay = image_BGR.copy()
+                    cv2.rectangle(overlay, (x_min, y_min),
+                                 (x_min + box_width, y_min + box_height),
+                                 colour_box_current, 1)
 
                     # Preparing text with label and confidence for current bounding box
                     text_box_current = '{}: {:.4f}'.format(labels['SignName'][prediction],
@@ -183,8 +185,9 @@ class Inference():
                     (w1, h1), _ = cv2.getTextSize(text_box_current, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 1)
                     
                     # Putting text with label and confidence on the original image
-                    image_BGR = cv2.rectangle(image_BGR, (x_min, y_min - 20), (x_min + w1, y_min), colour_box_current, -1, cv2.LINE_AA)
-                    image_BGR = cv2.putText(image_BGR, text_box_current, (x_min, y_min - 5),
+                    cv2.rectangle(overlay, (x_min, y_min - 20), (x_min + w1, y_min), colour_box_current, -1, cv2.LINE_AA)
+                    image = cv2.addWeighted(overlay, 0.6, image_BGR, 0.4, 0)
+                    image_BGR = cv2.putText(image, text_box_current, (x_min, y_min - 5),
                                             cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,0,0), 1, cv2.LINE_AA)
 
                     cv2.imwrite(self.output, image_BGR)
