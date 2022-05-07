@@ -1,14 +1,14 @@
 # Traffic Sign Detection and Classification
-## Traffic Sign recognition in real time using YOLO-v3 and additional CNN
+## Traffic Sign recognition using YOLO-v3 and additional CNN
 
 
-Main goal of this project is to detect and classify the traffic signs in real time. The project involves delvelopment of two models. First model is based on YOLOv3 (You Only Look Once version-3) architecture, which is trained on German Traffic Sign Detection Benchmark(GTSDB) dataset. This model gives accurate detection of traffic signs as result of correct bounding box arround the traffic sign.
+Main goal of this project is to detect and classify the traffic signs. The project involves delvelopment of two models. First model is based on **YOLOv3 (You Only Look Once version-3)** architecture, which is trained on **German Traffic Sign Detection Benchmark(GTSDB)** dataset. This model gives accurate detection of traffic signs as result of correct bounding box arround the traffic sign.
 
-Second model is based on Convolutional Neural Network(CNN), which is developed and trained on German Traffic Sign Recognition Benchmark(GTSRB) dataset. This model provieds accurate classification of the detected traffic signs from the YOLOv3 model.
+Second model is based on **Convolutional Neural Network(CNN)**, which is developed and trained on **German Traffic Sign Recognition Benchmark(GTSRB)** dataset. This model provieds accurate classification of the detected traffic signs from the YOLOv3 model.
 
 Both models are used in stake to make detection and classification at the same time.
 
-**Note** : _Here, the second model(CNN) has been trained in order to incease the classification accuracy, because in the first Model(YoloV3) training only 900 Images were available to classify among 43 classes._
+_**Note**_ : _Here, the second model(CNN) has been trained in order to increase the classification accuracy, because in the first Model(YoloV3) training only 900 Images were available to classify among 43 classes._
 
 
 ## Project Flowchart
