@@ -32,4 +32,10 @@ _**Note**_ : _Here, the second model(CNN) has been trained in order to increase 
 
 https://user-images.githubusercontent.com/64780908/130487780-853a9e9b-378d-4a41-81b2-b0e312e12c61.mp4
 
+## Inference
+### Image Inference
+  ```
+  python Test/image_test.py 
+  ```
+
 
