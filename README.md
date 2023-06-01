@@ -35,7 +35,10 @@ https://user-images.githubusercontent.com/64780908/130487780-853a9e9b-378d-4a41-
 ## Inference
 ### Image Inference
   ```
-  python Test/image_test.py 
+  python Test/image_test.py --input 'provide/input-image/path' --weights 'provide/yolo_weight/path' --model 'provide/CNN-model/path' --output 'provide/output/path/to save the image'
   ```
-
+### Video Inference
+  ```
+  python Test/video_test.py --input 'provide/input-video/path' --weights 'provide/yolo_weight/path' --model 'provide/CNN-model/path' --output 'provide/output/path/to save the video'
+  ```
 
