@@ -29,8 +29,8 @@ _**Note**_ : _Here, the second model(CNN) has been trained in order to increase 
 ![final_2](https://user-images.githubusercontent.com/64780908/130485453-05c28ba8-17e8-48e7-8a26-bbbea25e2de9.jpg)
 
 ## Sample video of the result
-
-https://user-images.githubusercontent.com/64780908/130487780-853a9e9b-378d-4a41-81b2-b0e312e12c61.mp4
+![](https://github.com/Ronak0310/Traffic-Sign-Detection-and-Classification/blob/main/fr_video_gif.gif)
+<!-- https://user-images.githubusercontent.com/64780908/130487780-853a9e9b-378d-4a41-81b2-b0e312e12c61.mp4 -->
 
 ## Inference
 ### Image Inference
