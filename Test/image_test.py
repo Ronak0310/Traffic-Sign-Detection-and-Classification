@@ -4,11 +4,9 @@
 
 # Import needed libraries
 import numpy as np
-from numpy.core.numeric import Inf 
 import pandas as pd 
 import cv2
 import time
-from timeit import default_timer as timer
 import matplotlib.pyplot as plt
 import pickle
 from tensorflow.keras.models import load_model
@@ -24,13 +22,14 @@ labels = pd.read_csv('../Required_files/signnames.csv')
 # print(labels.head())
 
 # Load mean image use for preprocessing further (mean image substraction)
-os.chdir('E:/Study_3/project_git/Traffic-Sign-Detection-and-Classification/Required_files')
+# os.chdir('E:/Study_3/project_git/Traffic-Sign-Detection-and-Classification/Required_files')
+os.chdir('../Required_files')
 with open('mean_image_gray.pickle', 'rb') as f:
     mean = pickle.load(f)
 
 
 class Inference():
-    def __init__(self, input, weights, model, output=None):
+    def __init__(self, input_path, weights, model, output_path=None):
         self.cfg = '../Required_files/yolov3_ts_test.cfg'
         self.probability_minimum = 0.2
         self.threshold = 0.2
@@ -39,19 +38,19 @@ class Inference():
         self.colours = np.random.randint(0, 255, size=(len(self.labels), 3), dtype='uint8')
 
         # Checking input
-        if os.path.isfile(input):
+        if os.path.isfile(input_path):
             # Further functionality needs to be added for Folder Inference :))
-            if input[-4:] in ['.png', '.jpg']:
-               self.input = input
+            if input_path.lower().endswith(('.png', '.jpg', '.jpeg')):
+               self.input = input_path
                self.inference_mode = 'SingleImage'
-            elif input[-4:] in ['.mp4', '.mkv', '.avi']:
-                self.input = input
+            elif input_path.lower().endswith(('.mp4', '.mkv', '.avi')):
+                self.input = input_path
                 self.inference_mode = 'Video'
             else:
                 print("Invalid input file. The file should be an image or a video !!")
                 exit(-1)
         else:
-            print("Input file doesn't exist. Check the input path")
+            print(f"Input file doesn't exist. Check the input path: {input_path}")
             exit(-1)
         
         # Checking weights
@@ -66,10 +65,10 @@ class Inference():
             exit(-1)
         
         # Checking output
-        if output == None:
+        if output_path == None:
             self.output = self.input.split('/')[-1]
         else:
-            self.output = output
+            self.output = output_path
         
         # Loading Classifier_Model
         self.model = load_model(self.model)
@@ -196,7 +195,7 @@ class Inference():
 
                     cv2.imwrite(self.output, image_BGR)
 
-        print(f'\n Detection finished in {t} seconds')
+        print(f'\nDetection finished in {t} seconds')
     
     def parse_opt():
         parser = argparse.ArgumentParser()
@@ -208,7 +207,11 @@ class Inference():
         return opt
 
     def main(opt):
-        Inference(**vars(opt))
+        # Map argparse arguments to new parameter names
+        opt_dict = vars(opt)
+        opt_dict['input_path'] = opt_dict.pop('input')
+        opt_dict['output_path'] = opt_dict.pop('output')
+        Inference(**opt_dict)
 
 
 if __name__ == "__main__":
